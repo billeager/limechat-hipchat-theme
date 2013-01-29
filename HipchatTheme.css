@@ -1,0 +1,84 @@
+html {
+  font-family: 'Lucida Grande';
+  font-size: 9pt;
+  background-color: white;
+  color: black;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0px 4px 0px 4px;
+}
+
+body { margin: 0; padding: 0; }
+
+/* the html tag has these classes and attributes too */
+body.normal {}
+body.console {}
+body[type=channel] {}
+body[type=talk] {}
+body[type=console] {}
+body[channelname=#limechat] {}
+
+hr { margin: 0.5em 2em; }
+a {}
+.inlineimage {}
+
+/* lines */
+.line { 
+  margin: 0 -6px;
+  border-top: 1px solid #ddd;
+}
+.line[alternate=even] {}
+.line[alternate=odd] {}
+.line[type=action] .sender:before {
+  content: "• ";
+  white-space: nowrap;
+}
+.line[highlight=true] {
+  background-color: #eee;
+}
+
+.url { word-break: break-all; }
+.address { text-decoration: underline; word-break: break-all; }
+.highlight { color: #f0f; font-weight: bold; }
+.time { float: right; color: #888; font-size: 8pt; padding: 6px 0; }
+.place { color: #008; }
+
+.sender {
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+  left: -100px;
+  padding: 6px 6px;
+  text-align: right;
+  width: 94px;
+}
+
+.message {
+  display: inline-block;
+  padding: 6px 0 6px 8px;
+}
+
+/* nickname for text messages */
+.sender[type=myself] { color: #555; background-color: #e0eeff; }
+.sender[type=normal] { color: #555; background-color: #eeeeee;}
+
+/* message body */
+.message {
+  color: #bbb!important;
+  line-height: 1.4;
+  padding-left: 118px;
+}
+
+.message span {
+  padding:6px 0 6px 8px;
+}
+
+.message[type=privmsg], .message[type=notice] {
+  color: #000!important;
+  padding-left: 10px;
+}
+
+.message[type=action] {
+  padding-left: 10px;
+}
